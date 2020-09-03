@@ -1,6 +1,6 @@
 package main
 
-func algorithmNumberOne(colors []int) int {
+func sockMerchant(colors []int) int {
 	var pairSocks int
 
 	colorMap := make(map[int]int)

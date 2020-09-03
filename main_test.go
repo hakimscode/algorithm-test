@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestAlgorithmOne(t *testing.T) {
+func TestSockMerchant(t *testing.T) {
 	type Test struct {
 		Describe string
 		Input    []int
@@ -28,12 +28,11 @@ func TestAlgorithmOne(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		result := algorithmNumberOne(test.Input)
+		result := sockMerchant(test.Input)
 		if result == test.Expected {
 			t.Logf("\n%s => SUCCESS, expected: %d; result: %d", test.Describe, test.Expected, result)
 		} else {
 			t.Errorf("\n%s => FAILED, expected: %d; result: %d", test.Describe, test.Expected, result)
 		}
 	}
-
 }
