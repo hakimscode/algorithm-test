@@ -124,3 +124,38 @@ func TestNominalLayers(t *testing.T) {
 		}
 	}
 }
+
+func TestWalkThroughSwitches(t *testing.T) {
+	type Test struct {
+		Describe string
+		Input    int
+		Expected int
+	}
+
+	tests := []Test{
+		{
+			Describe: "Test 5 switches",
+			Input:    5,
+			Expected: 2,
+		},
+		{
+			Describe: "Test 10 switches",
+			Input:    10,
+			Expected: 3,
+		},
+		{
+			Describe: "Test 100 switches",
+			Input:    100,
+			Expected: 10,
+		},
+	}
+
+	for _, test := range tests {
+		result := walkThroughSwitches(test.Input)
+		if result == test.Expected {
+			t.Logf("\n%s => SUCCESS, expected: %v; result: %v", test.Describe, test.Expected, result)
+		} else {
+			t.Errorf("\n%s => FAILED, expected: %v; result: %v", test.Describe, test.Expected, result)
+		}
+	}
+}

@@ -63,6 +63,25 @@ func nominalLayers(nominal int) []int {
 	return layers
 }
 
+func walkThroughSwitches(switches int) int {
+	var lampOn int
+	lamps := make([]bool, switches)
+
+	for trip := 1; trip <= len(lamps); trip++ {
+		for lampAt := trip - 1; lampAt < len(lamps); lampAt += trip {
+			lamps[lampAt] = !lamps[lampAt]
+		}
+	}
+
+	for _, lamp := range lamps {
+		if lamp {
+			lampOn++
+		}
+	}
+
+	return lampOn
+}
+
 func main() {
 
 }
