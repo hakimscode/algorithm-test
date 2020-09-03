@@ -3,15 +3,37 @@ package main
 import "testing"
 
 func TestAlgorithmOne(t *testing.T) {
-	colors := []int{1, 2, 1, 2, 3, 2}
-	expected := 2
+	type Test struct {
+		Describe string
+		Input    []int
+		Expected int
+	}
 
-	result := algorithmNumberOne(colors)
+	tests := []Test{
+		{
+			Describe: "Test with Array 1",
+			Input:    []int{1, 2, 1, 2, 3, 2},
+			Expected: 2,
+		},
+		{
+			Describe: "Test with Array 2",
+			Input:    []int{10, 20, 20, 10, 10, 30, 50, 10, 20},
+			Expected: 3,
+		},
+		{
+			Describe: "Test with no pairs Array",
+			Input:    []int{1, 2, 3, 4, 5, 6},
+			Expected: 0,
+		},
+	}
 
-	if result == expected {
-		t.Logf("Algorithm Number One SUCCESS, expected %d and the result is %d", result, expected)
-	} else {
-		t.Errorf("Algorithm Number One FAILED, expected %d but the result is %d", result, expected)
+	for _, test := range tests {
+		result := algorithmNumberOne(test.Input)
+		if result == test.Expected {
+			t.Logf("\n%s => SUCCESS, expected: %d; result: %d", test.Describe, test.Expected, result)
+		} else {
+			t.Errorf("\n%s => FAILED, expected: %d; result: %d", test.Describe, test.Expected, result)
+		}
 	}
 
 }
