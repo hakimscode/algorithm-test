@@ -18,6 +18,10 @@ func sockMerchant(colors []int) int {
 	return pairSocks
 }
 
+func countingValleys(steps string) int {
+	return 0
+}
+
 func main() {
 
 }

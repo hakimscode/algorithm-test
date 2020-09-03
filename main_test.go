@@ -36,3 +36,28 @@ func TestSockMerchant(t *testing.T) {
 		}
 	}
 }
+
+func TestCountingValleys(t *testing.T) {
+	type Test struct {
+		Describe string
+		Input    string
+		Expected int
+	}
+
+	tests := []Test{
+		{
+			Describe: "Test with steps Array 1",
+			Input:    "DDUUUUDD",
+			Expected: 1,
+		},
+	}
+
+	for _, test := range tests {
+		result := countingValleys(test.Input)
+		if result == test.Expected {
+			t.Logf("\n%s => SUCCESS, expected: %d; result: %d", test.Describe, test.Expected, result)
+		} else {
+			t.Errorf("\n%s => FAILED, expected: %d; result: %d", test.Describe, test.Expected, result)
+		}
+	}
+}
