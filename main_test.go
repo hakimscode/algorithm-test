@@ -50,6 +50,21 @@ func TestCountingValleys(t *testing.T) {
 			Input:    "DDUUUUDD",
 			Expected: 1,
 		},
+		{
+			Describe: "Test with steps Array 2",
+			Input:    "UDDDUDUU",
+			Expected: 1,
+		},
+		{
+			Describe: "Test with steps through 3 valleys",
+			Input:    "DUDUDU",
+			Expected: 3,
+		},
+		{
+			Describe: "Test with steps without valleys",
+			Input:    "UDUDUD",
+			Expected: 0,
+		},
 	}
 
 	for _, test := range tests {
