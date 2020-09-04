@@ -7,7 +7,7 @@
   `./app`
 
 ## Run Without Docker
-- Install [Golang][https://golang.org/dl/]
+- Install [Golang](https://golang.org/dl/)
 - Build the app
 
   `go build`
@@ -21,4 +21,6 @@
   `go run .`
 
 ## Test
-    go test -v
+- Run the tests
+
+  `go test -v`
