@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 	"strconv"
 	"strings"
@@ -83,5 +84,35 @@ func walkThroughSwitches(switches int) int {
 }
 
 func main() {
+	// todo use all the functions with little explanation
+	// todo create a bash file using docker to run the application
+	// todo update README (run application, test, build)
+	input1 := []int{10, 20, 20, 10, 10, 30, 50, 10, 20}
+	fmt.Printf("===================================\n")
+	fmt.Printf("Algorithm Number One (sockMerchant)\n")
+	fmt.Printf("Sample Input\n%v\n%v\n", len(input1), input1)
+	fmt.Printf("Sample Output\n%v\n", sockMerchant(input1))
+	fmt.Printf("===================================\n")
+
+	input2 := "UDDDUDUU"
+	fmt.Printf("===================================\n")
+	fmt.Printf("Algorithm Number Two (countingValleys)\n")
+	fmt.Printf("Sample Input\n%v\n%v\n", len(input2), input2)
+	fmt.Printf("Sample Output\n%v\n", countingValleys(input2))
+	fmt.Printf("===================================\n")
+
+	input3 := 1345679
+	fmt.Printf("===================================\n")
+	fmt.Printf("Algorithm Number Three (nominalLayers)\n")
+	fmt.Printf("Sample Input\n%v\n", input3)
+	fmt.Printf("Sample Output\n%v\n", nominalLayers(input3))
+	fmt.Printf("===================================\n")
+
+	input4 := 100
+	fmt.Printf("===================================\n")
+	fmt.Printf("Algorithm Number Four (walkThroughSwitches)\n")
+	fmt.Printf("Sample Input\n%v\n", input4)
+	fmt.Printf("Sample Output\n%v\n", walkThroughSwitches(input4))
+	fmt.Printf("===================================\n")
 
 }
