@@ -84,9 +84,6 @@ func walkThroughSwitches(switches int) int {
 }
 
 func main() {
-	// todo use all the functions with little explanation
-	// todo create a bash file using docker to run the application
-	// todo update README (run application, test, build)
 	input1 := []int{10, 20, 20, 10, 10, 30, 50, 10, 20}
 	fmt.Printf("===================================\n")
 	fmt.Printf("Algorithm Number One (sockMerchant)\n")
